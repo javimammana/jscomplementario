@@ -23,6 +23,10 @@ while(opcion != "Salir" || "SALIR" || "salir") {
             alert ("A la brevedad te contactaremos para quitarte tu dinero...");
             console.log ("El usuario " + nombre + ", esta interesado en " + producto + " contactar via " + contacto + ", revisen si le pueden vender algo mas, no se, digo!");
             break;
+
+        default:
+            alert ("Vuelva a comunicarse");
+            break;
     }
     break;
 }
