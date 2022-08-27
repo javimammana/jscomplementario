@@ -1,7 +1,10 @@
 let nombre = prompt ("Bienvenido al centro de atención, Ingresa tu nombre");
 let opcion = prompt ("hola "+nombre+", en que podemos ayudarte? \n Atencion al cliente \n Soporte Tecnico \n Ventas \n Salir");
-
-while(opcion != "Salir" || "SALIR" || "salir") {
+console.log (opcion)
+while (opcion != "Salir" || "SALIR" || "salir" && opcion != "atencion al cliente" || "Atencion al cliente" || "ATENCION AL CLIENTE" && opcion != "soporte tecnico" || "Soporte tecnico" || "SOPORTE TECNICO" && opcion != "ventas" || "Ventas" || "VENTAS") {
+    
+    opcion = prompt (nombre+" por favor elija entre estas opciones: \n Atencion al cliente \n Soporte Tecnico \n Ventas \n Salir");
+    
     switch (opcion) {
         case "atencion al cliente" || "Atencion al cliente" || "ATENCION AL CLIENTE":
             let consulta = prompt ("Ingrese su consulta aqui...");
@@ -25,7 +28,7 @@ while(opcion != "Salir" || "SALIR" || "salir") {
             break;
 
         default:
-            alert ("Vuelva a comunicarse");
+            alert ("Palabra incorrecta...");
             break;
     }
     break;
