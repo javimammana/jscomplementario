@@ -1,11 +1,10 @@
 let nombre = prompt ("Bienvenido al centro de atención, Ingresa tu nombre");
 let opcion = prompt ("hola "+nombre+", en que podemos ayudarte? \n Atencion al cliente \n Soporte Tecnico \n Ventas \n Salir");
-console.log (opcion)
+
 while (opcion != "Salir" || "SALIR" || "salir" && opcion != "atencion al cliente" || "Atencion al cliente" || "ATENCION AL CLIENTE" && opcion != "soporte tecnico" || "Soporte tecnico" || "SOPORTE TECNICO" && opcion != "ventas" || "Ventas" || "VENTAS") {
     
-    opcion = prompt (nombre+" por favor elija entre estas opciones: \n Atencion al cliente \n Soporte Tecnico \n Ventas \n Salir");
-    
     switch (opcion) {
+
         case "atencion al cliente" || "Atencion al cliente" || "ATENCION AL CLIENTE":
             let consulta = prompt ("Ingrese su consulta aqui...");
             let mail = prompt ("Ingrese su mail...");
@@ -27,9 +26,11 @@ while (opcion != "Salir" || "SALIR" || "salir" && opcion != "atencion al cliente
             console.log ("El usuario " + nombre + ", esta interesado en " + producto + " contactar via " + contacto + ", revisen si le pueden vender algo mas, no se, digo!");
             break;
 
-        default:
-            alert ("Palabra incorrecta...");
+        case "salir" || "Salir" || "SALIR":
+            alert ("Menos mal que no molesta con preguntas! :)");
+            console.log (nombre + " solo queria molestar.");
             break;
     }
-    break;
+    opcion = prompt (nombre+" por favor eleji entre estas opciones: \n Atencion al cliente \n Soporte Tecnico \n Ventas \n Salir");
 }
+
